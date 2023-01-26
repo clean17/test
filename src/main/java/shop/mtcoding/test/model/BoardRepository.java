@@ -3,13 +3,20 @@ package shop.mtcoding.test.model;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface BoardRepository {
     
     public List<Board> findAll();
-    public Board findByUserId();
-    public int createBoard();
-    public int updateBoard();
-    public int deleteBoard();
+    public Board findByUserId(int id);
+    public int createBoard(
+        @Param("title") String title,
+        @Param("userId") int userId
+    );
+    public int updateBoard(
+        @Param("title") String title,
+        @Param("userId") int userId
+    );
+    public int deleteBoard(int userId);
 }

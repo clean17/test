@@ -2,8 +2,6 @@ package shop.mtcoding.test.model;
 
 import java.sql.Timestamp;
 
-import org.springframework.web.bind.annotation.SessionAttributes;
-
 import lombok.Getter;
 import lombok.Setter;
 
