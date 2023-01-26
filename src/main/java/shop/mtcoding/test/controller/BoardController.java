@@ -7,7 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BoardController {
 
     @GetMapping("/")
-    public String main(){
-    return "main";
+    public String main() {
+        return "board/main";
     }
+
+    @GetMapping("/userboard")
+    public String userBoard() {
+        // 로그인 확인
+        // 서비스 호출
+        return "board/userBoard";
+    }
+
 }
