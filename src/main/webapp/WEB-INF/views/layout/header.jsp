@@ -21,8 +21,9 @@
 
                     <c:otherwise>
                         <li><a href="/">홈</a></li>
+                        <li><a href="/user/update">회원정보 수정</a></li>
                         <li><a href="/logout">로그아웃</a></li>
-                        <li><a href="/userboard">내 게시글 보기</a></li>
+                        <li><a href="/user/board">내 게시글 보기</a></li>
                     </c:otherwise>
                 </c:choose>
 

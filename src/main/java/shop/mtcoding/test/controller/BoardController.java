@@ -31,7 +31,7 @@ public class BoardController {
         return "board/main";
     }
 
-    @GetMapping("/userboard")
+    @GetMapping("/user/board")
     public String userBoard(Model model) {
         // 로그인 확인
         User principal = (User) session.getAttribute("principal");
@@ -42,7 +42,7 @@ public class BoardController {
         return "board/userBoard";
     }
     
-    @GetMapping("/writeboard")
+    @GetMapping("/board/insert")
     public String writeboard(){
         // 글쓰기 구현 예정
         return "";

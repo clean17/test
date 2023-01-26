@@ -20,7 +20,7 @@
 
     
 </table>
-<form action="/writeboard" method="get">
+<form action="/board/insert" method="get">
     <button type="submit">글쓰기</button>
 </form>
 

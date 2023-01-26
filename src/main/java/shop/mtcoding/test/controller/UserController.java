@@ -71,5 +71,19 @@ public class UserController {
         return "redirect:/";
     }
 
+    @GetMapping("/user/update")
+    public String updateForm(){
+        User principal = (User) session.getAttribute("principal");
+        if ( principal == null ) return "redirect:/notfound";
+        
+        
+        return "user/updateForm";
+    }
+    
+    @PostMapping("/user/update")
+    public String userUpdate(){
+    
+        return "" ;
+    }
 
 }
