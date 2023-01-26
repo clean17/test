@@ -7,7 +7,7 @@
     <table>
         <tr>
             <td>
-                <input type="text" name="username" value="${principal.username}" readonly>
+                <input type="text" value="${principal.username}" readonly>
             </td>
         </tr>
         <tr>
@@ -22,7 +22,7 @@
         </tr>
     </table>
     
-        
+    <input type="hidden" name="updateId" value="${principal.id}">
     <button type="submit"> 수정하기 </button>
 
     

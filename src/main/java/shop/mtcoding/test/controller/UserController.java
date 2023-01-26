@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import shop.mtcoding.test.model.User;
 import shop.mtcoding.test.model.UserRepository;
+import shop.mtcoding.test.service.UserService;
 
 @Controller
 public class UserController {
@@ -20,6 +21,9 @@ public class UserController {
 
     @Autowired
     private HttpSession session;
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("loginForm")
     public String loginForm() {
@@ -75,15 +79,18 @@ public class UserController {
     public String updateForm(){
         User principal = (User) session.getAttribute("principal");
         if ( principal == null ) return "redirect:/notfound";
-        
-        
         return "user/updateForm";
     }
-    
+
     @PostMapping("/user/update")
-    public String userUpdate(){
-    
-        return "" ;
+    public String userUpdate(String password, String email, int updateId){
+        User principal = (User) session.getAttribute("principal");
+        if ( principal == null ) return "redirect:/notfound";
+
+        int result = userService.회원정보수정(password, email, principal.getId(), updateId);
+        if ( result != 1 ) return "redirect:/notfound";
+
+        return "redirect:/" ;
     }
 
 }

@@ -27,7 +27,9 @@ public class BoardController {
     private BoardRepository boardRepository;
 
     @GetMapping("/")
-    public String main() {
+    public String main(Model model) {
+        List<Board> boardList = boardRepository.findAll();
+        model.addAttribute("boardList", boardList);
         return "board/main";
     }
 

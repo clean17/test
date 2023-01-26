@@ -24,4 +24,5 @@ public interface UserRepository {
         @Param("id") int id
     );
     public int deleteUser(int id);
+    public User findById(int it);
 }
