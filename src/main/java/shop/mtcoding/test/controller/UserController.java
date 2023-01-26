@@ -27,7 +27,6 @@ public class UserController {
 
     @GetMapping("/loginForm")
     public String loginForm() {
-        // 아이디 체크 쿠키 확인
         return "user/loginForm";
     }
 

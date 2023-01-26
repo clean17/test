@@ -18,9 +18,7 @@ h1{
 button {
     padding: 1px;
 }
-table{
-    /* margin-bottom: 10px; */
-}
+
 .nav{
     display: grid;
     grid-template-columns: 1fr 2fr;
