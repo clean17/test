@@ -9,6 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-    test
+    <ul>
+        <li><a href="/">홈</a></li>
+        <li><a href="/loginForm">로그인</a></li>
+        <li><a href="/logout">로그아웃</a></li>
+        <li><a href="/joinForm">회원가입</a></li>
+        <li><a href="/userBoard">내 게시글 보기</a></li>
+    </ul>
+    <hr>
+    <h1>가운데</h1>
+    <hr>
+    <h1>푸터</h1>
 </body>
 </html>
