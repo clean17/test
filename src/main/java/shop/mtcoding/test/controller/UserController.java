@@ -1,5 +1,7 @@
 package shop.mtcoding.test.controller;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +47,26 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(String username, String password){
+    public String login(String username, String password, String remember,
+        HttpServletResponse response){
+            
         User principal = userRepository.findByUsernameAndPassword(username, password);
-        if ( principal == null ) return "redirect:/notfound";
+        if ( principal == null ) {
+            return "redirect:/notfound";
+        }else{
+            if( remember == null ) {
+                remember = "";
+            }
+            if( remember.equals("on")){
+                System.out.println("디버그 : " + username);
+                Cookie cookie = new Cookie("remember", username);
+                response.addCookie(cookie);
+            }else{
+                Cookie cookie = new Cookie("remember", "");
+                cookie.setMaxAge(0);
+                response.addCookie(cookie);
+            }
+        }
         session.setAttribute("principal", principal);
         return "redirect:/";
     }

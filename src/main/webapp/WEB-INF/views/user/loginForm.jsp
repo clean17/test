@@ -7,7 +7,7 @@
     <table>
         <tr>
             <td>
-                <input type="text" name="username" placeholder="아이디 입력" required>
+                <input type="text" name="username" value="${cookie.remember.value}" placeholder="아이디 입력" required>
             </td>
         </tr>
         <tr>
@@ -16,8 +16,13 @@
             </td>
         </tr>
     </table>
-    <button > <a href="/joinForm">회원가입 하러 가기</a> </button>
+    <div>
+        <input type="checkbox" name="remember" ">아아디 기억하기
     <button type="submit"> 로그인 </button>
+</div>
+    <div>
+    <button > <a href="/joinForm">회원가입 하러 가기</a> </button>
+</div>
 </form>
 </fieldset>
 
