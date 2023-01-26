@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+}
+li a{
+    font-size:  20px;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    padding-top: 30px;;
+}
+button {
+    padding: 1px;
+}
+table{
+    /* margin-bottom: 10px; */
+}
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.nav_flex{
+    display: flex;
+    justify-content: space-around;  
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px;;
+}
+.footer{
+    display: grid;
+    justify-content: center;
+    background-color: rgb(255, 222, 222);
+    grid-template-rows: 20;
+    gap: 20px;
+    font-size: 20;
+    font-weight: 600;
+}
+.main_box{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 70%;
+}
+
+.bottom_btn1{
+    padding: 10px;
+    display: grid;
+    justify-content: end;
+}
+.btn1{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(252, 251, 251);
+    background-color: rgb(114, 101, 228);
+    border: 0;
+    cursor: pointer;
+    padding: 6px
+}
+.btn1 a{
+    color: rgb(252, 251, 251);
+    
+}
+.login_btn_layout{
+    display: grid;
+    justify-content: end;
+    /* padding: 10px;    */
+    margin: 10px;
+    gap: 10px;
+    
+}
+.login_btn{
+    display: grid;
+    gap: 10px;
+    /* justify-self: end; */
+}

@@ -25,13 +25,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("loginForm")
+    @GetMapping("/loginForm")
     public String loginForm() {
         // 아이디 체크 쿠키 확인
         return "user/loginForm";
     }
 
-    @GetMapping("joinForm")
+    @GetMapping("/joinForm")
     public String joinForm(){
         return "user/joinForm";
     }
