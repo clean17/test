@@ -22,7 +22,7 @@
                     <c:otherwise>
                         <li><a href="/">홈</a></li>
                         <li><a href="/logout">로그아웃</a></li>
-                        <li><a href="/userBoard">내 게시글 보기</a></li>
+                        <li><a href="/userboard">내 게시글 보기</a></li>
                     </c:otherwise>
                 </c:choose>
 

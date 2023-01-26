@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 public interface BoardRepository {
     
     public List<Board> findAll();
-    public Board findByUserId(int id);
+    public List<Board> findByUserId(int userId);
     public int createBoard(
         @Param("title") String title,
         @Param("userId") int userId
